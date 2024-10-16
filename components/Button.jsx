@@ -1,6 +1,5 @@
 import styles from "./Button.module.css";
 function Button({ children, type, event }) {
-  const check = type === "position";
   return (
     <button
       onClick={event}

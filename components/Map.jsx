@@ -7,18 +7,20 @@ import {
   Popup,
   useMap,
 } from "react-leaflet";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Button from "./Button";
 
 import { useSearchParams } from "react-router-dom";
 import User from "./User";
+import { AppContext } from "../src/contexts/AppContext";
 
-function Map({ cities, loading }) {
+function Map() {
+  const { cities } = useContext(AppContext);
   const [searchParams] = useSearchParams();
   const lat = searchParams.get("lat");
   const lng = searchParams.get("lng");
-  const { isLoading, error, position, getPosition } = useGeolocation();
+  const { isLoading, position, getPosition } = useGeolocation();
   const [markerPosition, setMarkerPosition] = useState([50.44, -1.86]); // Initial marker position
   const [post, setPos] = useState(false);
   const navigate = useNavigate();
@@ -48,6 +50,7 @@ function Map({ cities, loading }) {
     },
     [lat, lng]
   );
+
   return (
     <div className={styles.mapContainer}>
       <User />

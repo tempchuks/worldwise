@@ -1,8 +1,10 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./CityItem.module.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Spinner from "./Spinner";
-function CityItem({ citydata, setCities, cities }) {
+import { AppContext } from "../src/contexts/AppContext";
+function CityItem({ citydata }) {
+  const { setCities, cities } = useContext(AppContext);
   const [loading, setLoading] = useState(false);
 
   async function onDeletecity(e) {

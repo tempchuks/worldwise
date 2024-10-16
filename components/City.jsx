@@ -1,8 +1,9 @@
 import { useNavigate, useParams } from "react-router";
 import styles from "./City.module.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import Button from "./Button";
+import { AppContext } from "../src/contexts/AppContext";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -12,7 +13,8 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
-function City({ isLoading, setIsLoading }) {
+function City() {
+  const { isLoading, setIsLoading } = useContext(AppContext);
   const [currentCity, setCurrentCity] = useState({});
   const { cityName, emoji, date, notes } = currentCity;
   const { id } = useParams();
