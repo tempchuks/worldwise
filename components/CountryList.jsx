@@ -9,7 +9,7 @@ function CountryList() {
     if (arr.map((el) => el.country).includes(cur.country)) return arr;
     else return [...arr, { country: cur.country, emoji: cur.emoji }];
   }, []);
-  console.log(country);
+
   return (
     <ul className={styles.countryList}>
       {countries.map((v, i) => (

@@ -1,27 +1,15 @@
 {
   "cities": [
     {
-      "cityName": "English Channel",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "date": "2024-10-16T17:55:24.713Z",
-      "emoji": "🇬🇧",
-      "id": 1729101329731,
-      "notes": "adele",
-      "position": {
-        "lat": "50.45171138711746",
-        "lng": "-1.8570725624657316"
-      }
-    },
-    {
-      "cityName": "Ikwerre",
+      "cityName": "Rumuodomaya",
       "country": "Nigeria",
-      "date": "2024-10-16T17:55:37.686Z",
+      "date": "2024-10-17T10:06:22.250Z",
       "emoji": "🇳🇬",
-      "id": 1729101346593,
-      "notes": "adele",
+      "id": 1729159586532,
+      "notes": "",
       "position": {
-        "lat": "5.00613045557265",
-        "lng": "6.961025366715688"
+        "lat": "4.8475883731769445",
+        "lng": "6.990051269531251"
       }
     }
   ]
